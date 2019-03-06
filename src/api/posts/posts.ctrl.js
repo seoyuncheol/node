@@ -14,6 +14,7 @@ exports.checkObjectId = (ctx, next) => {
 
 exports.writes = async ctx => {
   const { title, body, tags } = ctx.request.body;
+
   const schema = Joi.object().keys({
     title: Joi.string().required(),
     body: Joi.string().required(),
